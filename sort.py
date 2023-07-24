@@ -16,3 +16,15 @@ insertionSort(arr)
 print ("排序后的数组:") 
 for i in range(len(arr)): 
     print ("%d" %arr[i])
+def swap(arr,i,j):
+  tmp = arr[i];
+  arr[i] = arr[j]
+  arr[j]=tmp
+
+def selection_sort(arr):
+    for i in range(0,len(arr)):
+      min = i
+      for j in range(i+1,len(arr)):
+        if arr[j] < arr[min]:
+          min = j
+      swap(arr,i,min)
